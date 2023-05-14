@@ -5,8 +5,6 @@ import {searchDataByName, handleNextPage, handlePreviousPage} from "../userSlice
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-console.log(userDetail)
-
 
 function UserData() {
     const dispatch = useDispatch()
@@ -49,9 +47,6 @@ function UserData() {
       return domainMatch && genderMatch && availabilityMatch;
     });
 
-    console.log(filteredUsers)
-
-  
 
   return (
     <div className="users">
@@ -106,7 +101,7 @@ function UserData() {
           {filterData?.length > 0
             ? filterData.map((user, i) => (
                 <Link to={`user-data/${user.id}`} key={i}>
-                  {user.first_name}
+                  {user.first_name} {user.last_name}
                 </Link>
               ))
             : "no users available"}
