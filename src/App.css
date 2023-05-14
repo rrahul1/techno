@@ -1,0 +1,20 @@
+.userData{
+    width: 80%;
+    padding-block: 3em;
+    padding-inline: 3em;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 2em;
+}
+
+img{
+    width: 100%;
+}
+
+@media screen and (max-width: 900px){
+    .userData{
+        width: 80%;
+        flex-direction: column;
+    }
+}
